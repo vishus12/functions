@@ -29,11 +29,12 @@ console.log(add(17, 4, 11));
 
 // Part 4: Self-Driving Cars
 const go = (direction, speed) => {
-    if (speed === 82){
+    if (speed === 82) {
         return "SLOW DOWN!"
     }
 }
-return "The car is moving" + direction, "at" + speed, + "mph"
+// return "The car is moving" + direction, "at" + speed, + "mph"
+
 const movingForwards = go("forwards", 45)
 const movingBackwards = go("backwards", 8)
 const goingInCircles = go("circles", 12)
@@ -53,11 +54,11 @@ console.log("The car is moving," + goingInCircles)
 
 
 // Part 5: Evens or Odds
-const number = prompt("Enter a number: ");
+// const number = prompt("Enter a number: 5");
 
-const result = (number % 2  == 0) ? "even" : "odd";
+// const result = (number % 2  == 0) ? "even" : "odd";
 
-console.log(`The number is ${result}.`);
+// console.log(`The number is ${result}.`);
 
 // // Part 6: Practice: Double Functions
 // const words = [
