@@ -29,73 +29,79 @@ console.log(add(17, 4, 11));
 
 // Part 4: Self-Driving Cars
 const go = (direction, speed) => {
-    if (speed === 82) {
+    if (direction === "forwards" && speed === 45) {
+        return "The car is moving forwards at 45 mph."
+    }
+    if (direction === "backwards" && speed === 8) {
+        return "The car is moving backwards at 8 mph."
+    }
+    if (direction === "circles" && speed === 12) {
+        return "The car is moving in circles at 12 mph."
+    }
+    if (speed === 83) {
         return "SLOW DOWN!"
     }
 }
-// return "The car is moving" + direction, "at" + speed, + "mph"
 
 const movingForwards = go("forwards", 45)
 const movingBackwards = go("backwards", 8)
 const goingInCircles = go("circles", 12)
 
-console.log("The car is moving," + goingInCircles)
-
-//     if (direction === "forwards") {
-//         return "The car is moving forwards at 45 mph."
-//     }
-//     if (direction === "backwards") {
-//         return "The car is moving backwards at 8 mph."
-//     }
-//     if (speed === "circles") {
-//         return "The car is moving in circles at 12 mph."
-//     }
-// }
-
+console.log(`${goingInCircles}`)
+console.log(`${movingBackwards}`)
+console.log(`${movingForwards}`)
 
 // Part 5: Evens or Odds
-// const number = prompt("Enter a number: 5");
 
-// const result = (number % 2  == 0) ? "even" : "odd";
+const evenOrOdd = (x) => {
+    if (x % 2 == 0) {
+        return "The number is even.";
+    }
 
-// console.log(`The number is ${result}.`);
+    else {
+        return "The number is odd.";
+    }
 
-// // Part 6: Practice: Double Functions
-// const words = [
-//     "The", "killing", "complex", "houses",
-//     "married", "kittens", "and", "single",
-//     "soldiers", "and", "their", "kleptomaniacal",
-//     "families"
-// ]
+}
+console.log(evenOrOdd(10))
+console.log(evenOrOdd(9))
 
-// /*
-//     Function to filter out `k` words
-//     (Google 'javascript startswith' to get started)
-//  */
-// const kFilter = words.startsWith("k");
+// Part 6: Practice: Double Functions
+const words = [
+    "The", "killing", "complex", "houses",
+    "married", "kittens", "and", "single",
+    "soldiers", "and", "their", "kleptomaniacal",
+    "families"
+]
 
-// /*
-//     Function to build a single string from the array
-//     (Google 'javascript combine all items in array' to get started)
-//  */
-// words.join();
+/*
+    Function to filter out `k` words
+    (Google 'javascript startswith' to get started)
+ */
+const kFilter = words.startsWith("k");
 
-
-// /*
-//     Invoke the filtering function and store its return value
-//  */
-// const result = words.filter(word => word.length > 13);
-
-// console.log(result);
-
-
-// /*
-//     Invoke the string building function, and pass the
-//     return value of the previous function as an argument
-// */
+/*
+    Function to build a single string from the array
+    (Google 'javascript combine all items in array' to get started)
+ */
+words.join();
 
 
-// console.log()
+/*
+    Invoke the filtering function and store its return value
+ */
+const result = words.filter(word => word.length > 13);
+
+console.log(result);
+
+
+/*
+    Invoke the string building function, and pass the
+    return value of the previous function as an argument
+*/
+
+
+console.log()
 
 // //Practice: You Can Tune a Piano, But You Can't...
 // function Math.random(val) * 2 {
