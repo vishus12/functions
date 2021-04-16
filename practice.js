@@ -25,31 +25,25 @@ const add = (a, b, c) => {
     return a + b + c;
 }
 let result = add(17, 4, 11)
-console.log(add(17, 4, 11));
+console.log(result);
 
 // Part 4: Self-Driving Cars
 const go = (direction, speed) => {
-    if (direction === "forwards" && speed === 45) {
-        return "The car is moving forwards at 45 mph."
-    }
-    if (direction === "backwards" && speed === 8) {
-        return "The car is moving backwards at 8 mph."
-    }
-    if (direction === "circles" && speed === 12) {
-        return "The car is moving in circles at 12 mph."
-    }
-    if (speed === 83) {
-        return "SLOW DOWN!"
+    if (speed < 75) {
+        return "The car is moving " + direction + " at " + speed + " mph"
+    } else (speed > 75); {
+        return "Slow Down"
     }
 }
-
 const movingForwards = go("forwards", 45)
-const movingBackwards = go("backwards", 8)
+const movingBackwards = go("backwards", 8 )
 const goingInCircles = go("circles", 12)
+result = go("circles", 83)
 
-console.log(`${goingInCircles}`)
-console.log(`${movingBackwards}`)
-console.log(`${movingForwards}`)
+console.log(movingForwards)
+console.log(movingBackwards)
+console.log(goingInCircles)
+console.log(result)
 
 // Part 5: Evens or Odds
 
@@ -67,51 +61,17 @@ console.log(evenOrOdd(10))
 console.log(evenOrOdd(9))
 
 // Part 6: Practice: Double Functions
-const words = [
-    "The", "killing", "complex", "houses",
-    "married", "kittens", "and", "single",
-    "soldiers", "and", "their", "kleptomaniacal",
-    "families"
-]
+// //Practice 7: You Can Tune a Piano, But You Can't...
 
-/*
-    Function to filter out `k` words
-    (Google 'javascript startswith' to get started)
- */
-const kFilter = words.startsWith("k");
-
-/*
-    Function to build a single string from the array
-    (Google 'javascript combine all items in array' to get started)
- */
-words.join();
-
-
-/*
-    Invoke the filtering function and store its return value
- */
-const result = words.filter(word => word.length > 13);
-
-console.log(result);
-
-
-/*
-    Invoke the string building function, and pass the
-    return value of the previous function as an argument
-*/
-
-
-console.log()
-
-// //Practice: You Can Tune a Piano, But You Can't...
-// function Math.random(val) * 2 {
-//     if (val <= 1 || val >= 1){
-//         return "Sven hooked a tuna!  :)";
-//     }
-//     return "Sven came up empty-handed.  :(";
-// }
-
-
-
-
+const heads = 0;
+const tails = 0;
+const flip = (x) => {
+    if (x) {
+        const x = (Math.floor(Math.random() * 2) == 0);
+        flip("heads");
+    } else {
+        flip("tails");
+    }
+};
+console.log(flip(2))
 
